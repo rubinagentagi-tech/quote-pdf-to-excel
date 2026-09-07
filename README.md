@@ -36,8 +36,8 @@ python quote2xls.py quote.pdf [more.pdf ...] -o out --csv
 ```
 
 ```text
-$ python quote2xls.py sample_quotes/CM-2026-0517_Coastal-Marine.pdf
-  CM-2026-0517_Coastal-Marine.pdf: 5 items, 2 flagged | Coastal Marine Supply Inc. | CM-2026-0517 | 2026-09-04
+$ python quote2xls.py sample_quotes/HL-2026-0517_Harborlight-Marine.pdf
+  HL-2026-0517_Harborlight-Marine.pdf: 5 items, 2 flagged | Harborlight Marine Supply Inc. | HL-2026-0517 | 2026-09-04
       ! row Bilge pump strainer, bronze, 2 inch NPT: math: 2 x 45.5 != 100
       ! row Stuffing box packing, 12mm square, graphite: no unit price
   -> wrote to /home/you/out
@@ -45,7 +45,7 @@ $ python quote2xls.py sample_quotes/CM-2026-0517_Coastal-Marine.pdf
 
 ## Sample output
 
-From `sample_quotes/Q-88213_Northstar.pdf` (a clean, unruled layout):
+From `sample_quotes/Q-88213_Nordmarin.pdf` (a clean, unruled layout):
 
 ```csv
 Part No,Qty,UOM,Description,Unit Price,Line Total,Flags
@@ -62,9 +62,13 @@ items. Flagged rows are shaded.
 
 The `sample_quotes/` folder holds two realistic synthetic quotes:
 
-- `CM-2026-0517_Coastal-Marine.pdf` — ruled table, **contains a deliberate
+- `HL-2026-0517_Harborlight-Marine.pdf` — ruled table, **contains a deliberate
   math error and a missing unit price** (see if the tool catches them)
-- `Q-88213_Northstar.pdf` — borderless aligned layout, clean math
+- `Q-88213_Nordmarin.pdf` — borderless aligned layout, clean math
+
+> **All sample content is fictitious**: companies, contacts, addresses, email
+> domains (reserved `.example.com`) and part numbers. No real supplier quote
+> or vendor data appears anywhere in this repository.
 
 ## Known limits (honest list)
 
